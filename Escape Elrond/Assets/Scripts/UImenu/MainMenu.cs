@@ -15,7 +15,6 @@ public class MainMenu : MonoBehaviour
     public int[] screenWidths;
     int activeScreenResIndex;
 
-
     public void PlayGame()
     {
         SceneManager.LoadScene("SampleScene");
@@ -38,6 +37,7 @@ public class MainMenu : MonoBehaviour
 
         fullscreenToggle.isOn = isFullscreen;
     }
+
     /*public void OptionsMenu()
     {
         mainMenuHolder.SetActive(false);
