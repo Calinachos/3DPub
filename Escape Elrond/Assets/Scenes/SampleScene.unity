@@ -9983,15 +9983,8 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-<<<<<<< HEAD
-  - component: {fileID: 519420030}
-=======
-<<<<<<< Updated upstream
-=======
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
->>>>>>> Stashed changes
->>>>>>> Gameplay-Programer---Camera-movement
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10070,7 +10063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3094611, y: 0.0361073, z: -10}
+  m_LocalPosition: {x: -1.313066, y: 0.0361073, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16584,12 +16577,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 25.234867, y: 14.729107}
-      - {x: 25.225317, y: 27.828852}
+    - - {x: 25.142456, y: 14.729107}
+      - {x: 25.17198, y: 27.764849}
       - {x: -13.28289, y: 27.769632}
       - {x: -13.308287, y: -7.0062}
-      - {x: 7.282208, y: -7.0062}
-      - {x: 7.293143, y: 14.749807}
+      - {x: 7.182964, y: -7.0172267}
+      - {x: 7.194425, y: 14.733355}
 --- !u!66 &897307209
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -16610,24 +16603,24 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 897307208}
     m_ColliderPaths:
-    - - X: 252348672
+    - - X: 251424560
         Y: 147291072
-      - X: 252253168
-        Y: 278288512
+      - X: 251719792
+        Y: 277648480
       - X: -132828904
         Y: 277696320
       - X: -133082864
         Y: -70062000
-      - X: 72822080
-        Y: -70062000
-      - X: 72931424
-        Y: 147498080
+      - X: 71829640
+        Y: -70172264
+      - X: 71944248
+        Y: 147333552
   m_CompositePaths:
     m_Paths:
-    - - {x: 7.2821784, y: -7.0062003}
-      - {x: 7.293172, y: 14.749808}
-      - {x: 25.234867, y: 14.729136}
-      - {x: 25.225288, y: 27.828852}
+    - - {x: 7.1829343, y: -7.0172267}
+      - {x: 7.1944547, y: 14.7333555}
+      - {x: 25.142456, y: 14.729136}
+      - {x: 25.171951, y: 27.764849}
       - {x: -13.28289, y: 27.769604}
       - {x: -13.308257, y: -7.0062003}
   m_VertexDistance: 0.0005
