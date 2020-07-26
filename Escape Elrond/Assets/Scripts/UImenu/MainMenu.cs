@@ -14,6 +14,9 @@ public class MainMenu : MonoBehaviour
     public Toggle fullscreenToggle;
     public int[] screenWidths;
     int activeScreenResIndex;
+    public GameObject mainMenuUI;
+    public GameObject optionsMenuUI;
+    public static bool isInOptions = false;
 
     public void PlayGame()
     {
@@ -23,6 +26,31 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Options()
+    {
+        mainMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(true);
+        isInOptions = true;
+    }
+
+    public void GoToMainMenu()
+    {
+        optionsMenuUI.SetActive(false);
+        mainMenuUI.SetActive(true);
+        isInOptions = false;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isInOptions)
+            {
+                GoToMainMenu();
+            }
+        }
     }
 
     void Start()

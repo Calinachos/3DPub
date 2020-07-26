@@ -1575,20 +1575,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1508858473}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 1834998407}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1508858475}
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2555,20 +2544,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1834998407}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 1508858473}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1834998409}
+        m_MethodName: Options
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3952,6 +3930,8 @@ MonoBehaviour:
   - {fileID: 806394165}
   fullscreenToggle: {fileID: 394620614}
   screenWidths: c00300000005000080070000
+  mainMenuUI: {fileID: 1834998407}
+  optionsMenuUI: {fileID: 1508858473}
 --- !u!114 &1508858476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4848,6 +4828,8 @@ MonoBehaviour:
   - {fileID: 806394165}
   fullscreenToggle: {fileID: 394620614}
   screenWidths: c00300000005000080070000
+  mainMenuUI: {fileID: 1834998407}
+  optionsMenuUI: {fileID: 1508858473}
 --- !u!1 &1901788921
 GameObject:
   m_ObjectHideFlags: 0
