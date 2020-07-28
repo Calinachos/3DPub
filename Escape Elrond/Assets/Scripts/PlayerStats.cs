@@ -5,9 +5,14 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public int life;
+    public int maxHealth = 100;
     public int experience;
     public int coins;
     public int level;
+
+    public HealthBar healthBar;
+    public ProgressBar progressBar;
+    public Coins playerCoins;
 
     int attack = 20;
     int defense = 0;
@@ -16,14 +21,18 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         level = 1;
-        life = 100;
+        life = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         experience = 0;
-        coins = 0;
+        //progressBar.CurrentValue();
+        coins = 100;
+        playerCoins.SetCoin(coins);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //experience = progressBar.CurrentValue();
         if (life == 0)
         {
             //death screen
@@ -34,9 +43,20 @@ public class PlayerStats : MonoBehaviour
         {
             experience = experience - 100 * level;
             level++;
-            life = life + 20;
             attack = attack + 2;
+            life = life + 20;
+            if(life<= maxHealth)
+                healthBar.SetHealth(life);
+            else
+                healthBar.SetHealth(maxHealth);
+           
         }
 
+    }
+
+    void TakeDamage(int damage)
+    {
+        life -= damage;
+        healthBar.SetHealth(life);
     }
 }
