@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - moveplat
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - Monsters
   - Platforms
   - CameraBounds
-  - 
-  - 
+  - CameraBounds2
+  - CameraBounds3
   - 
   - 
   - 
