@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 
-    public static bool GameIsPaused = false;
+    public bool GameIsPaused = false;
     public static bool IsInOptions = false;
 
     public GameObject pauseMenuUI;
@@ -52,6 +52,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
     }
 
     public void Options()
@@ -69,5 +70,17 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         GameIsPaused = true;
         IsInOptions = false;
+    }
+
+    public void PlayAgain()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Room_0");
+        Time.timeScale = 1f;
+    }
+
+    public void DeathTime()
+    {
+        Time.timeScale = 0f;
     }
 }

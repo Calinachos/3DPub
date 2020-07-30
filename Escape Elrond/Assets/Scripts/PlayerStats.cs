@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     public HealthBar healthBar;
     public ProgressBar progressBar;
     public Coins playerCoins;
+    public GameObject deathMenu;
 
     int attack = 20;
     int defense = 0;
@@ -20,6 +21,7 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
         level = 1;
         life = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -33,9 +35,21 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         //experience = progressBar.CurrentValue();
-        if (life == 0)
+        if (life <= 0)
         {
+ 
+            Time.timeScale = 0f;
+            deathMenu.SetActive(true);
             //death screen
+            healthBar.SetA(false);
+            progressBar.SetA(false);
+            //playerCoins.SetA(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            life = life - 500;
+            healthBar.SetHealth(life);
         }
 
         // level up 100xp -> 2, 200xp -> 3, 300xp -> 4 and so on

@@ -8,6 +8,7 @@ public class ProgressBar : FillBar
 
     // Event to invoke when the progress bar fills up
     private UnityEvent onProgressComplete;
+    public GameObject xpBarUI;
 
     // Create a property to handle the slider's value
     public new float CurrentValue
@@ -41,7 +42,7 @@ public class ProgressBar : FillBar
     void Update()
     {
         //CurrentValue += 0.0153f;
-        CurrentValue += 2.0f;
+        CurrentValue += 2.0f * Time.timeScale;
     }
 
     // The method to call when the progress bar fills up
@@ -50,5 +51,10 @@ public class ProgressBar : FillBar
         lvl++;
         //displayLevel.text = lvl.ToString();
         Debug.Log("Progress Complete");
+    }
+
+    public void SetA(bool val)
+    {
+        xpBarUI.SetActive(val);
     }
 }

@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
+    public PauseMenu pause;
 
     public float runSpeed = 40f;
 
@@ -16,22 +17,24 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Attack1"))
+        if (pause.GameIsPaused == false)
         {
-            animator.SetTrigger("Attack1");
+            if (Input.GetButtonDown("Attack1"))
+            {
+                animator.SetTrigger("Attack1");
+            }
+
+            attack = animator.GetBool("isAttacking");
+
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+            if (Input.GetButtonDown("Jump") && !attack)
+            {
+                jump = true;
+            }
         }
-
-        attack = animator.GetBool("isAttacking");
-
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-    
-        if (Input.GetButtonDown("Jump") && !attack)
-        {
-            jump = true;
-        }
-
 
     }
 
