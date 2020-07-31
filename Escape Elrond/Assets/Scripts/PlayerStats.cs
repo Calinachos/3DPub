@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour
     public GameObject deathMenu;
 
     int attack = 20;
-    int defense = 0;
+    public int defense = 0;
     
     // Start is called before the first frame update
     void Start()
