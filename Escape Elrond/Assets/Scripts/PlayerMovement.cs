@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Attack1"))
             {
                 animator.SetTrigger("Attack1");
+                Attack();
             }
 
             attack = animator.GetBool("isAttacking");

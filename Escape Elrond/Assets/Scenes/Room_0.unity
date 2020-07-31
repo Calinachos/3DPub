@@ -40416,7 +40416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   controller: {fileID: 1783755706}
   animator: {fileID: 1783755702}
   pause: {fileID: 1089165837}

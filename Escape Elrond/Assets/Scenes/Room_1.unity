@@ -1465,6 +1465,7 @@ MonoBehaviour:
   progressBar: {fileID: 2038412470}
   playerCoins: {fileID: 0}
   deathMenu: {fileID: 1045553392}
+  defense: 0
 --- !u!95 &39965081
 Animator:
   serializedVersion: 3
@@ -1496,6 +1497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a16b29b255cb4419a19df78de73baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 2048
   controller: {fileID: 39965085}
   animator: {fileID: 39965081}
   pause: {fileID: 83232506}
@@ -11391,7 +11395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305134035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6466631, y: 0.9569964, z: -10}
+  m_LocalPosition: {x: 1.6437652, y: 0.9569964, z: -10}
   m_LocalScale: {x: 0.26653668, y: 0.26653668, z: 0.79961}
   m_Children: []
   m_Father: {fileID: 39965087}

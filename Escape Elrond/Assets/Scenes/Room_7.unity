@@ -8101,7 +8101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151427594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9000611, y: 0.9731745, z: -10}
+  m_LocalPosition: {x: 1.8971629, y: 0.9731745, z: -10}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_Children: []
   m_Father: {fileID: 1856192262}
@@ -99806,6 +99806,7 @@ MonoBehaviour:
   progressBar: {fileID: 2051136166}
   playerCoins: {fileID: 0}
   deathMenu: {fileID: 706007891}
+  defense: 0
 --- !u!95 &1856192256
 Animator:
   serializedVersion: 3
@@ -99837,6 +99838,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a16b29b255cb4419a19df78de73baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 2048
   controller: {fileID: 1856192260}
   animator: {fileID: 1856192256}
   pause: {fileID: 738064476}

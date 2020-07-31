@@ -80715,6 +80715,7 @@ MonoBehaviour:
   progressBar: {fileID: 1496354441}
   playerCoins: {fileID: 0}
   deathMenu: {fileID: 2050378077}
+  defense: 0
 --- !u!95 &1865013454
 Animator:
   serializedVersion: 3
@@ -80746,6 +80747,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a16b29b255cb4419a19df78de73baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 2048
   controller: {fileID: 1865013458}
   animator: {fileID: 1865013454}
   pause: {fileID: 909575999}
