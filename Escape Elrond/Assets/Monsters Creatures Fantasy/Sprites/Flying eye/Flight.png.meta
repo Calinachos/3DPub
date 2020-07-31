@@ -26,8 +26,32 @@ TextureImporter:
   - first:
       213: 7784096630628774620
     second: Flight_7
+  - first:
+      213: -2413814711432465816
+    second: Flight_0
+  - first:
+      213: 8428950517639195108
+    second: Flight_1
+  - first:
+      213: 4772844889480914746
+    second: Flight_2
+  - first:
+      213: 5676879882571621726
+    second: Flight_3
+  - first:
+      213: -7489325608630659580
+    second: Flight_4
+  - first:
+      213: 5067580723476750495
+    second: Flight_5
+  - first:
+      213: -6257197626206487677
+    second: Flight_6
+  - first:
+      213: -657249154476012559
+    second: Flight_7
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -81,6 +105,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -149,10 +174,10 @@ TextureImporter:
       name: Flight_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 150
-        height: 150
+        x: 57
+        y: 58
+        width: 41
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b60f3b428266f641882fff33b3d5e5a
-      internalID: -4795363162621231457
+      spriteID: 862b4731f48608ed0800000000000000
+      internalID: -2413814711432465816
       vertices: []
       indices: 
       edges: []
@@ -170,10 +195,10 @@ TextureImporter:
       name: Flight_1
       rect:
         serializedVersion: 2
-        x: 150
-        y: 0
-        width: 150
-        height: 150
+        x: 207
+        y: 58
+        width: 41
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10226d6044353eb4fa948bd574ea736f
-      internalID: -3652676412848291748
+      spriteID: 4e9aa3956d5a9f470800000000000000
+      internalID: 8428950517639195108
       vertices: []
       indices: 
       edges: []
@@ -191,10 +216,10 @@ TextureImporter:
       name: Flight_2
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 150
-        height: 150
+        x: 357
+        y: 61
+        width: 40
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,8 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ad4b872376ed3e4486247ba89b9be8d
-      internalID: -596950462376016933
+      spriteID: a376c8da32d8c3240800000000000000
+      internalID: 4772844889480914746
       vertices: []
       indices: 
       edges: []
@@ -212,10 +237,10 @@ TextureImporter:
       name: Flight_3
       rect:
         serializedVersion: 2
-        x: 450
-        y: 0
-        width: 150
-        height: 150
+        x: 508
+        y: 60
+        width: 39
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,8 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6175273388504464690a5ffdb4b6e945
-      internalID: -4538786591655478766
+      spriteID: e552e310d2458ce40800000000000000
+      internalID: 5676879882571621726
       vertices: []
       indices: 
       edges: []
@@ -233,10 +258,10 @@ TextureImporter:
       name: Flight_4
       rect:
         serializedVersion: 2
-        x: 600
-        y: 0
-        width: 150
-        height: 150
+        x: 657
+        y: 60
+        width: 40
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,8 +269,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b82a24c2d9256047b65475093a49a14
-      internalID: 8639066506597270619
+      spriteID: 40655520a02901890800000000000000
+      internalID: -7489325608630659580
       vertices: []
       indices: 
       edges: []
@@ -254,10 +279,10 @@ TextureImporter:
       name: Flight_5
       rect:
         serializedVersion: 2
-        x: 750
-        y: 0
-        width: 150
-        height: 150
+        x: 806
+        y: 59
+        width: 42
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b03cc7e3212354449903d7c9f940e356
-      internalID: -4262185617143388622
+      spriteID: f90e27d91d9a35640800000000000000
+      internalID: 5067580723476750495
       vertices: []
       indices: 
       edges: []
@@ -275,10 +300,10 @@ TextureImporter:
       name: Flight_6
       rect:
         serializedVersion: 2
-        x: 900
-        y: 0
-        width: 150
-        height: 150
+        x: 958
+        y: 58
+        width: 40
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,8 +311,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d78b014b5797f54bb5585f62835f8ab
-      internalID: 5066340549283584134
+      spriteID: 38b7b8839e7f929a0800000000000000
+      internalID: -6257197626206487677
       vertices: []
       indices: 
       edges: []
@@ -296,10 +321,10 @@ TextureImporter:
       name: Flight_7
       rect:
         serializedVersion: 2
-        x: 1050
-        y: 0
-        width: 150
-        height: 150
+        x: 1108
+        y: 57
+        width: 40
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33f8db84057f2e143a48f74752555df2
-      internalID: 7784096630628774620
+      spriteID: 1fb0882506bf0e6f0800000000000000
+      internalID: -657249154476012559
       vertices: []
       indices: 
       edges: []
