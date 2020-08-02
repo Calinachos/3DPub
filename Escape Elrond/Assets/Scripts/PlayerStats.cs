@@ -37,7 +37,6 @@ public class PlayerStats : MonoBehaviour
         //experience = progressBar.CurrentValue();
         if (life <= 0)
         {
- 
             Time.timeScale = 0f;
             deathMenu.SetActive(true);
             //death screen
