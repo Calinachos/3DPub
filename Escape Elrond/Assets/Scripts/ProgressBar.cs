@@ -9,27 +9,7 @@ public class ProgressBar : FillBar
     // Event to invoke when the progress bar fills up
     private UnityEvent onProgressComplete;
     public GameObject xpBarUI;
-
-    // Create a property to handle the slider's value
-    public new float CurrentValue
-    {
-        get
-        {
-            return base.CurrentValue;
-        }
-        set
-        {
-            // If the value exceeds the max fill, invoke the completion function
-            if (value >= slider.maxValue)
-            {
-                onProgressComplete.Invoke();
-            }
-
-            // Remove any overfill (i.e. 105% fill -> 5% fill)
-            base.CurrentValue = value % slider.maxValue;
-        }
-    }
-
+    public float CurrentValue;
 
     void Start()
     {
@@ -42,13 +22,20 @@ public class ProgressBar : FillBar
     void Update()
     {
         //CurrentValue += 0.0153f;
-        CurrentValue += 2.0f * Time.timeScale;
+        CurrentValue += 2.0f;
+        base.CurrentValue = CurrentValue;
+        if (CurrentValue >= slider.maxValue)
+        {
+            onProgressComplete.Invoke();
+            slider.maxValue += 100;
+        }
     }
 
     // The method to call when the progress bar fills up
     void OnProgressComplete()
     {
         lvl++;
+        CurrentValue = 0;
         //displayLevel.text = lvl.ToString();
         Debug.Log("Progress Complete");
     }

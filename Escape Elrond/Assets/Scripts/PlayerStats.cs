@@ -34,6 +34,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthBar.SetHealth(life);
         //experience = progressBar.CurrentValue();
         if (life <= 0)
         {
@@ -48,10 +49,8 @@ public class PlayerStats : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             life = life - 500;
-            healthBar.SetHealth(life);
         }
 
-        experience++;
         Debug.Log("Current Hp : " + life + " MaxHp: " + maxHealth + " Experience: " + experience);
         // level up 100xp -> 2, 200xp -> 3, 300xp -> 4 and so on
 
@@ -61,7 +60,8 @@ public class PlayerStats : MonoBehaviour
             level++;
             attack = attack + 2;
             life = life + 20;
-            if(life<= maxHealth)
+            maxHealth = maxHealth + 20;
+            if (life<= maxHealth)
                 healthBar.SetHealth(life);
             else
                 healthBar.SetHealth(maxHealth);

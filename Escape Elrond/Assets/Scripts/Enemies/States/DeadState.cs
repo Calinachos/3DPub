@@ -18,6 +18,10 @@ public class DeadState : State
 
     public override void Enter()
     {
+        GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
+        PlayerStats playerStat = player.GetComponent <PlayerStats> ();
+        playerStat.experience += 50;
+    
         base.Enter();
 
         entity.anim.SetTrigger("dead");
