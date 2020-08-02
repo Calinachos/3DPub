@@ -52,7 +52,10 @@ public class PlayerStats : MonoBehaviour
             healthBar.SetHealth(life);
         }
 
+        experience++;
+        Debug.Log("Current Hp : " + life + " MaxHp: " + maxHealth + " Experience: " + experience);
         // level up 100xp -> 2, 200xp -> 3, 300xp -> 4 and so on
+
         if (experience / level >= 100)
         {
             experience = experience - 100 * level;
@@ -63,7 +66,6 @@ public class PlayerStats : MonoBehaviour
                 healthBar.SetHealth(life);
             else
                 healthBar.SetHealth(maxHealth);
-           
         }
 
     }
