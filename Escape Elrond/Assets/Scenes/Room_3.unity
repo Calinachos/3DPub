@@ -24871,6 +24871,7 @@ MonoBehaviour:
   progressBar: {fileID: 1147269004}
   playerCoins: {fileID: 0}
   deathMenu: {fileID: 336741033}
+  xpBar: {fileID: 1147269004}
   defense: 0
 --- !u!95 &907905517
 Animator:
@@ -32599,6 +32600,7 @@ MonoBehaviour:
   displayLevel: {fileID: 1260900740}
   lvl: 1
   xpBarUI: {fileID: 17959789}
+  CurrentValue: 0
 --- !u!224 &1147269005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47059,7 +47061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701673658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4568669, y: 1.0254929, z: -10}
+  m_LocalPosition: {x: -1.4602687, y: 1.0254929, z: -10}
   m_LocalScale: {x: 0.35714284, y: 0.35714284, z: 1}
   m_Children: []
   m_Father: {fileID: 907905523}

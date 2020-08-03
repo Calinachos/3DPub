@@ -2161,6 +2161,7 @@ MonoBehaviour:
   progressBar: {fileID: 972356809}
   playerCoins: {fileID: 0}
   deathMenu: {fileID: 962881621}
+  xpBar: {fileID: 972356809}
   defense: 0
 --- !u!95 &148674668
 Animator:
@@ -17680,6 +17681,7 @@ MonoBehaviour:
   displayLevel: {fileID: 1400127594}
   lvl: 1
   xpBarUI: {fileID: 2074187874}
+  CurrentValue: 0
 --- !u!114 &972356810
 MonoBehaviour:
   m_ObjectHideFlags: 0

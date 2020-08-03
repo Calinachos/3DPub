@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour
     public ProgressBar progressBar;
     public Coins playerCoins;
     public GameObject deathMenu;
+    public ProgressBar xpBar;
 
     int attack = 20;
     public int defense = 0;
@@ -35,6 +36,8 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         healthBar.SetHealth(life);
+        xpBar.CurrentValue = experience;
+        xpBar.lvl = level;
         //experience = progressBar.CurrentValue();
         if (life <= 0)
         {

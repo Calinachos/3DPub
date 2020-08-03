@@ -21,8 +21,6 @@ public class ProgressBar : FillBar
 
     void Update()
     {
-        //CurrentValue += 0.0153f;
-        CurrentValue += 2.0f;
         base.CurrentValue = CurrentValue;
         if (CurrentValue >= slider.maxValue)
         {
