@@ -21,7 +21,7 @@ public class DeadState : State
         GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
         PlayerStats playerStat = player.GetComponent <PlayerStats> ();
         playerStat.experience += 50;
-    
+        playerStat.coins += 5;
         base.Enter();
 
         entity.anim.SetTrigger("dead");

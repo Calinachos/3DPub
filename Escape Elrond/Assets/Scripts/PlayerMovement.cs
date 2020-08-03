@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
     public PauseMenu pause;
+    public PlayerStats ps;
+    public AudioSource missAttackSound;
 
     public float runSpeed = 40f;
 
@@ -21,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     //Function for fighting an enemy - by Stefan Epure
     void Attack()
     {
+        bool attackedSomebody = false;
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(this.gameObject.transform.position, 1, whatIsEnemy);
         //Cel mai bine ar fi sa schimbati raza, eu am pus-o 1, dar vedeti voi care merge mai bine*****^****** Ar merge si parametrizata
 
@@ -34,8 +37,19 @@ public class PlayerMovement : MonoBehaviour
                 ad.position = (Vector2)collider.gameObject.transform.position;
                 ad.stunDamageAmount = 5;
                 collider.gameObject.transform.parent.GetComponent<Entity>().Damage(ad);
+                attackedSomebody = true;
             }
 
+        }
+        if (attackedSomebody)
+        {
+
+        } else
+        {
+            if (!missAttackSound.isPlaying)
+            {
+                missAttackSound.Play();
+            }
         }
     }
     /**************************************************/
@@ -47,14 +61,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (pause.GameIsPaused == false)
         {
-            if (Input.GetButtonDown("Attack1"))
+            if (ps.treeIsUp == false)
             {
-                animator.SetTrigger("Attack1");
-                Attack();
+                if (Input.GetButtonDown("Attack1"))
+                {
+                    animator.SetTrigger("Attack1");
+                    Attack();
+                }
+                attack = animator.GetBool("isAttacking");
             }
-
-            attack = animator.GetBool("isAttacking");
-
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));

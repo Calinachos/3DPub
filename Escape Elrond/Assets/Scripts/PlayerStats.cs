@@ -14,7 +14,9 @@ public class PlayerStats : MonoBehaviour
     public ProgressBar progressBar;
     public Coins playerCoins;
     public GameObject deathMenu;
-    public ProgressBar xpBar;
+    public SkillTree st;
+    public GameObject tree;
+    public bool treeIsUp;
 
     int attack = 20;
     public int defense = 0;
@@ -24,20 +26,20 @@ public class PlayerStats : MonoBehaviour
     {
         Time.timeScale = 1f;
         level = 1;
+        st.points = 0;
         life = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         experience = 0;
-        //progressBar.CurrentValue();
-        coins = 100;
-        playerCoins.SetCoin(coins);
+        treeIsUp = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerCoins.SetCoin(coins);
         healthBar.SetHealth(life);
-        xpBar.CurrentValue = experience;
-        xpBar.lvl = level;
+        progressBar.CurrentValue = experience;
+        progressBar.lvl = level;
         //experience = progressBar.CurrentValue();
         if (life <= 0)
         {
@@ -54,13 +56,36 @@ public class PlayerStats : MonoBehaviour
             life = life - 500;
         }
 
-        Debug.Log("Current Hp : " + life + " MaxHp: " + maxHealth + " Experience: " + experience);
-        // level up 100xp -> 2, 200xp -> 3, 300xp -> 4 and so on
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            if (treeIsUp == false)
+            {
+                tree.SetActive(true);
+                treeIsUp = true;
+            }
+            else
+            {
+                tree.SetActive(false);
+                treeIsUp = false;
+            }
+        }
 
-        if (experience / level >= 100)
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (treeIsUp)
+            {
+                tree.SetActive(false);
+                treeIsUp = false;
+            }
+        }
+            //Debug.Log("Current Hp : " + life + " MaxHp: " + maxHealth + " Experience: " + experience);
+            // level up 100xp -> 2, 200xp -> 3, 300xp -> 4 and so on
+
+            if (experience / level >= 100)
         {
             experience = experience - 100 * level;
             level++;
+            st.points++;
             attack = attack + 2;
             life = life + 20;
             maxHealth = maxHealth + 20;
