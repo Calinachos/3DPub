@@ -50,7 +50,8 @@ public class PauseMenu : MonoBehaviour
 
     public void BackToMenu()
     {
-	Destroy(GameObject.Find("Skill_Tree_Canvas(Clone)"));
+        Destroy(GameObject.Find("Skill_Tree_Canvas(Clone)"));
+        Destroy(GameObject.Find("SceneManagerDontDestroy(Clone)"));
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
