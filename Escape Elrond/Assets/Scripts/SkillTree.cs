@@ -18,20 +18,6 @@ public class SkillTree : MonoBehaviour
     [SerializeField]
     private Text talentPointText;
     // Start is called before the first frame update
-    
-    public int MyPoints
-    {
-        get
-        {
-            return points;
-        }
-
-        set
-        {
-            points = value;
-            UpdateTalentPointText();
-        }
-    }
 
     void Start()
     {
@@ -42,15 +28,17 @@ public class SkillTree : MonoBehaviour
 
     public void TryUseSkill(Skills skill)
     {
-        if (MyPoints > 0 && skill.Click())
+        if (points > 0 && skill.Click())
         {
-            MyPoints--;
+            points--;
+            UpdateTalentPointText();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+	Debug.Log(points);
         UpdateTalentPointText();
     }
 
@@ -69,7 +57,7 @@ public class SkillTree : MonoBehaviour
         }
     }
 
-    private void UpdateTalentPointText()
+    public void UpdateTalentPointText()
     {
         talentPointText.text = points.ToString();
     }

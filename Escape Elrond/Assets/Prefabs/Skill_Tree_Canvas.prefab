@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4510441228967501246}
   - component: {fileID: 4510441228967501247}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PointValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2995,7 +2995,6 @@ GameObject:
   - component: {fileID: 4510441231075581718}
   - component: {fileID: 4510441231075581715}
   - component: {fileID: 4510441231075581712}
-  - component: {fileID: 4510441231075581713}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -3063,19 +3062,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4510441231075581713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4510441231075581719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 206d7183e273a8f4397c0d9563663fed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: 0
-  skills: []
-  unclockedDefault: []
-  talentPointText: {fileID: 4510441228967501247}

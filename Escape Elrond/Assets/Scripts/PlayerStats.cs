@@ -86,13 +86,12 @@ public class PlayerStats : MonoBehaviour
             experience = experience - 100 * level;
             level++;
             st.points++;
+            st.UpdateTalentPointText();
             attack = attack + 2;
-            life = life + 20;
             maxHealth = maxHealth + 20;
-            if (life<= maxHealth)
-                healthBar.SetHealth(life);
-            else
-                healthBar.SetHealth(maxHealth);
+            life = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetHealth(maxHealth);
         }
 
     }

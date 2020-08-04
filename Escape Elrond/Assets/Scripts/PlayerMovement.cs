@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public PauseMenu pause;
     public PlayerStats ps;
-    public AudioSource missAttackSound;
-
+    [SerializeField] private AudioSource missAttackSound;
+    [SerializeField] private AudioSource attackSound;
     public float runSpeed = 40f;
 
     float horizontalMove = 0f;
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (attackedSomebody)
         {
-
+            attackSound.Play();
         } else
         {
             if (!missAttackSound.isPlaying)

@@ -13,6 +13,8 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
 	[SerializeField] private Animator animator;
     [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource landSound;
+    [SerializeField] private AudioSource walkSound;
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
@@ -44,19 +46,22 @@ public class CharacterController2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+        bool playedOnce = false;
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
 
-		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
-		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
-		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+        // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
+        // This can be done using layers instead but Sample Assets will not overwrite your project settings.
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
 		for (int i = 0; i < colliders.Length; i++)
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
-                if (!wasGrounded && !jumpSound.isPlaying)
+                if (!playedOnce && !wasGrounded && !landSound.isPlaying)
                 {
-                    jumpSound.Play();
+                    landSound.Play();
+                    playedOnce = true;
                 }
                 animator.SetBool("isGrounded", true);
 				m_Grounded = true;
@@ -86,6 +91,14 @@ public class CharacterController2D : MonoBehaviour
 		// And then smoothing it out and applying it to the character
 		m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
     
+        if (m_Grounded && Mathf.Abs(move) > 0.1 && !walkSound.isPlaying)
+        {
+            walkSound.Play();
+        }
+        if (!m_Grounded || Mathf.Abs(move) <= 0.1)
+        {
+            walkSound.Stop();
+        }
 		// If the input is moving the player right and the player is facing left...
 		if (move > 0 && !m_FacingRight)
 		{
@@ -102,6 +115,7 @@ public class CharacterController2D : MonoBehaviour
 		if (m_Grounded && jump)
 		{
             // Add a vertical force to the player.
+            jumpSound.Play();
             animator.SetBool("isGrounded", false);
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
