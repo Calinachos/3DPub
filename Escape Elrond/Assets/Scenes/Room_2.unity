@@ -12770,7 +12770,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f45c75300773c840ad392cdc3bf12a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroy: {fileID: 5947737824510823124, guid: 250eff0cd1a15d14f8654daaaa66d60b,
+  sceneManager: {fileID: 5947737824510823124, guid: 250eff0cd1a15d14f8654daaaa66d60b,
+    type: 3}
+  skillTree: {fileID: 4510441230921177475, guid: 21b8206a0b3b6424c83a05de3ade7df6,
     type: 3}
 --- !u!4 &499565591
 Transform:
@@ -22021,7 +22023,7 @@ PrefabInstance:
     - target: {fileID: 1504272382403382906, guid: 93f51f1bca56eef4e99d93534044fde3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.284595
+      value: 2.1136527
       objectReference: {fileID: 0}
     - target: {fileID: 1504272382403382906, guid: 93f51f1bca56eef4e99d93534044fde3,
         type: 3}

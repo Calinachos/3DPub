@@ -30752,7 +30752,9 @@ MonoBehaviour:
   progressBar: {fileID: 829327504}
   playerCoins: {fileID: 0}
   deathMenu: {fileID: 453872430}
-  xpBar: {fileID: 829327504}
+  st: {fileID: 0}
+  tree: {fileID: 0}
+  treeIsUp: 0
   defense: 0
 --- !u!95 &1083095509
 Animator:
@@ -30791,6 +30793,8 @@ MonoBehaviour:
   controller: {fileID: 1083095513}
   animator: {fileID: 1083095509}
   pause: {fileID: 1426059074}
+  ps: {fileID: 0}
+  missAttackSound: {fileID: 0}
   runSpeed: 40
 --- !u!61 &1083095511
 BoxCollider2D:
@@ -30862,6 +30866,7 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 1896727755}
   m_CrouchDisableCollider: {fileID: 0}
   animator: {fileID: 1083095509}
+  jumpSound: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -35430,7 +35435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263493226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.00000008514949, z: -10}
+  m_LocalPosition: {x: 0.64969605, y: -0.002696429, z: -10}
   m_LocalScale: {x: 0.35714284, y: 0.35714284, z: 1}
   m_Children: []
   m_Father: {fileID: 1083095515}
@@ -42693,7 +42698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f45c75300773c840ad392cdc3bf12a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroy: {fileID: 5947737824510823124, guid: 250eff0cd1a15d14f8654daaaa66d60b,
+  sceneManager: {fileID: 5947737824510823124, guid: 250eff0cd1a15d14f8654daaaa66d60b,
+    type: 3}
+  skillTree: {fileID: 4510441230921177475, guid: 21b8206a0b3b6424c83a05de3ade7df6,
     type: 3}
 --- !u!4 &1588846409
 Transform:
