@@ -21,7 +21,6 @@ public class SkillTree : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Start");
         ResetTalents(); 
     }
 

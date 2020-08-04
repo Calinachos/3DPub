@@ -36,8 +36,11 @@ public class PlayerMovement : MonoBehaviour
                 ad.damageAmount = 10;
                 ad.position = (Vector2)collider.gameObject.transform.position;
                 ad.stunDamageAmount = 5;
-                collider.gameObject.transform.parent.GetComponent<Entity>().Damage(ad);
-                attackedSomebody = true;
+                if (!collider.gameObject.transform.parent.GetComponent<Entity>().isDead)
+                {
+                    collider.gameObject.transform.parent.GetComponent<Entity>().Damage(ad);
+                    attackedSomebody = true;
+                }
             }
 
         }

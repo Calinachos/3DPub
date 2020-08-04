@@ -44,7 +44,6 @@ public class PlayerStats : MonoBehaviour
         progressBar.CurrentValue = experience;
         progressBar.lvl = level;
         //experience = progressBar.CurrentValue();
-        Debug.Log(formerLife + " " + life);
         if (formerLife != life)
         {
             if (formerLife > life)

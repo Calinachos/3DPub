@@ -31,7 +31,7 @@ public class Entity : MonoBehaviour
     private Vector2 velocityWorkspace;
 
     protected bool isStunned;
-    protected bool isDead;
+    public bool isDead;
 
     public virtual void Start()
     {
