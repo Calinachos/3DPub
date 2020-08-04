@@ -17516,7 +17516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264202463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4929733, y: 0.017106192, z: -10}
+  m_LocalPosition: {x: 2.3185008, y: 0.026565107, z: -10}
   m_LocalScale: {x: 0.35714284, y: 0.35714284, z: 1}
   m_Children: []
   m_Father: {fileID: 648815148}
@@ -43209,7 +43209,9 @@ MonoBehaviour:
   progressBar: {fileID: 1854753455}
   playerCoins: {fileID: 0}
   deathMenu: {fileID: 2120834680}
-  xpBar: {fileID: 1854753455}
+  st: {fileID: 0}
+  tree: {fileID: 0}
+  treeIsUp: 0
   defense: 0
 --- !u!95 &648815152
 Animator:
@@ -43248,6 +43250,8 @@ MonoBehaviour:
   controller: {fileID: 648815156}
   animator: {fileID: 648815152}
   pause: {fileID: 1206129105}
+  ps: {fileID: 0}
+  missAttackSound: {fileID: 0}
   runSpeed: 40
 --- !u!61 &648815154
 BoxCollider2D:
@@ -43319,6 +43323,7 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 1578252949}
   m_CrouchDisableCollider: {fileID: 0}
   animator: {fileID: 648815152}
+  jumpSound: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -143941,7 +143946,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f45c75300773c840ad392cdc3bf12a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroy: {fileID: 5947737824510823124, guid: 250eff0cd1a15d14f8654daaaa66d60b,
+  sceneManager: {fileID: 5947737824510823124, guid: 250eff0cd1a15d14f8654daaaa66d60b,
+    type: 3}
+  skillTree: {fileID: 4510441230921177475, guid: 21b8206a0b3b6424c83a05de3ade7df6,
     type: 3}
 --- !u!4 &2057591161
 Transform:

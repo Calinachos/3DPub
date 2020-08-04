@@ -24,9 +24,10 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SetReferences();
         Time.timeScale = 1f;
         level = 1;
-        st.points = 0;
+        //st.points = 0;
         life = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         experience = 0;
@@ -55,7 +56,6 @@ public class PlayerStats : MonoBehaviour
         {
             life = life - 500;
         }
-
         if (Input.GetKeyDown(KeyCode.N))
         {
             if (treeIsUp == false)
@@ -101,5 +101,11 @@ public class PlayerStats : MonoBehaviour
     {
         life -= damage;
         healthBar.SetHealth(life);
+    }
+
+    void SetReferences()
+    {
+        tree = GameObject.Find("Skill_Tree_Canvas(Clone)").transform.GetChild(0).gameObject;
+        st = tree.GetComponent<SkillTree>();
     }
 }

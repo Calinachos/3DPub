@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class SetPlayerStats : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,6 +15,8 @@ public class SetPlayerStats : MonoBehaviour
             // Find the script with player stats and change the stats
             var playerStats = GetComponent<PlayerStats>();
             playerStats.life = saveInfo.playerHealth;
+            Debug.Log("------------" + playerStats.life);
+            Debug.Log(SceneManager.GetActiveScene().name);
             playerStats.experience = saveInfo.playerExperience;
             playerStats.level = saveInfo.playerLevel;
             playerStats.coins = saveInfo.playerCoins;

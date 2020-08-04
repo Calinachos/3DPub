@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SkillTree : MonoBehaviour
 {
-    public PlayerStats ps;
+    // public PlayerStats ps;
     public int points;
 
     [SerializeField]
@@ -31,10 +32,11 @@ public class SkillTree : MonoBehaviour
             UpdateTalentPointText();
         }
     }
-    
+
     void Start()
     {
         //points = ps.skillPoints;
+        points = 0;
         ResetTalents(); 
     }
 
