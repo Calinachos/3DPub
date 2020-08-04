@@ -17,7 +17,7 @@ public class Skills : MonoBehaviour
     private int currentCount;
 
     [SerializeField]
-    private bool unlocked;
+    public bool unlocked;
 
     [SerializeField]
     private Skills childSkill;

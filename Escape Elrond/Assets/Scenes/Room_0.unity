@@ -11507,6 +11507,18 @@ Transform:
   m_Father: {fileID: 1412425774}
   m_RootOrder: 82
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &562119720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4510441229008529109, guid: 21b8206a0b3b6424c83a05de3ade7df6,
+    type: 3}
+  m_PrefabInstance: {fileID: 453670858}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4eb633088fd614092844b04dd0005e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &566218437
 GameObject:
   m_ObjectHideFlags: 0
@@ -42266,6 +42278,11 @@ PrefabInstance:
       propertyPath: walkSound
       value: 
       objectReference: {fileID: 1863435226}
+    - target: {fileID: 1504272382577359052, guid: 93f51f1bca56eef4e99d93534044fde3,
+        type: 3}
+      propertyPath: shadowStep
+      value: 
+      objectReference: {fileID: 562119720}
     - target: {fileID: 1504272382811349675, guid: 93f51f1bca56eef4e99d93534044fde3,
         type: 3}
       propertyPath: m_AnchorMax.y
