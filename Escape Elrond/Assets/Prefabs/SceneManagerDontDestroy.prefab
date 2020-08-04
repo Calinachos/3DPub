@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextDoor: 
+  playerHealth: -1
+  playerExperience: -1
+  playerLevel: 1
+  playerCoins: -1
+  playerMaxHealth: -1

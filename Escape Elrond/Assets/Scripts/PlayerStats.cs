@@ -8,7 +8,7 @@ public class PlayerStats : MonoBehaviour
     public int maxHealth = 100;
     public int experience;
     public int coins;
-    public int level;
+    public int level = 1;
 
     public HealthBar healthBar;
     public ProgressBar progressBar;
@@ -17,16 +17,18 @@ public class PlayerStats : MonoBehaviour
     public SkillTree st;
     public GameObject tree;
     public bool treeIsUp;
+    [SerializeField] private AudioSource gameOverSound;
+    [SerializeField] private AudioSource takeDamageSound;
 
     int attack = 20;
     public int defense = 0;
-    
+    private bool gameOver = false;
+    private int formerLife = 0;
     // Start is called before the first frame update
     void Start()
     {
         SetReferences();
         Time.timeScale = 1f;
-        level = 1;
         //st.points = 0;
         life = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -42,14 +44,28 @@ public class PlayerStats : MonoBehaviour
         progressBar.CurrentValue = experience;
         progressBar.lvl = level;
         //experience = progressBar.CurrentValue();
+        Debug.Log(formerLife + " " + life);
+        if (formerLife != life)
+        {
+            if (formerLife > life)
+            {
+                takeDamageSound.Play();
+            }
+            formerLife = life;
+        }
         if (life <= 0)
         {
-            Time.timeScale = 0f;
-            deathMenu.SetActive(true);
-            //death screen
-            healthBar.SetA(false);
-            progressBar.SetA(false);
-            //playerCoins.SetA(false);
+            if (!gameOver)
+            {
+                gameOver = true;
+                gameOverSound.Play();
+                Time.timeScale = 0f;
+                deathMenu.SetActive(true);
+                //death screen
+                healthBar.SetA(false);
+                progressBar.SetA(false);
+                //playerCoins.SetA(false);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.P))
@@ -80,8 +96,7 @@ public class PlayerStats : MonoBehaviour
         }
             //Debug.Log("Current Hp : " + life + " MaxHp: " + maxHealth + " Experience: " + experience);
             // level up 100xp -> 2, 200xp -> 3, 300xp -> 4 and so on
-
-            if (experience / level >= 100)
+        if (experience / level >= 100)
         {
             experience = experience - 100 * level;
             level++;

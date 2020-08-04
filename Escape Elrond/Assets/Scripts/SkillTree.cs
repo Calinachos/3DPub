@@ -21,8 +21,7 @@ public class SkillTree : MonoBehaviour
 
     void Start()
     {
-        //points = ps.skillPoints;
-        points = 0;
+        Debug.Log("Start");
         ResetTalents(); 
     }
 
@@ -38,7 +37,6 @@ public class SkillTree : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-	Debug.Log(points);
         UpdateTalentPointText();
     }
 
