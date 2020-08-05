@@ -580,7 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 4510441229017325587}
   maxCount: 3
-  unlocked: 1
+  unlocked: 0
   childSkill: {fileID: 4510441229874284272}
   skillAvailable: 0
 --- !u!114 &4510441229696011072
@@ -883,7 +883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 4510441230177101539}
   maxCount: 2
-  unlocked: 1
+  unlocked: 0
   childSkill: {fileID: 4510441229008529109}
   skillAvailable: 0
 --- !u!114 &4510441229768449053
@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 4510441229712651289}
   maxCount: 3
-  unlocked: 1
+  unlocked: 0
   childSkill: {fileID: 4510441230430916887}
   skillAvailable: 0
 --- !u!114 &4510441230404600078

@@ -42442,6 +42442,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2774229651216251215, guid: 93f51f1bca56eef4e99d93534044fde3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774229651216251215, guid: 93f51f1bca56eef4e99d93534044fde3,
+        type: 3}
+      propertyPath: Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774229651216251215, guid: 93f51f1bca56eef4e99d93534044fde3,
+        type: 3}
+      propertyPath: Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774229651216251215, guid: 93f51f1bca56eef4e99d93534044fde3,
+        type: 3}
+      propertyPath: Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774229651216251215, guid: 93f51f1bca56eef4e99d93534044fde3,
+        type: 3}
+      propertyPath: Density
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6142840872413962996, guid: 93f51f1bca56eef4e99d93534044fde3,
         type: 3}
       propertyPath: m_Volume

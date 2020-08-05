@@ -35,7 +35,6 @@ public class ProgressBar : FillBar
         lvl++;
         CurrentValue = 0;
         //displayLevel.text = lvl.ToString();
-        Debug.Log("Progress Complete");
     }
 
     public void SetA(bool val)

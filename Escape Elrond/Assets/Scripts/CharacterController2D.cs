@@ -48,7 +48,6 @@ public class CharacterController2D : MonoBehaviour
         GameObject abilities = tier2.transform.GetChild(0).gameObject;
         GameObject step = abilities.transform.GetChild(1).gameObject;
         shadowStep = step.GetComponent<Skills>();
-        Debug.Log(shadowStep);
     }
     private void Awake()
 	{
