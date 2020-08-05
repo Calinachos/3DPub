@@ -16,6 +16,9 @@ public class Goblin : Entity
     public AudioSource coins2;
     public AudioSource coins3;
     public AudioSource walkSound;
+    public AudioSource goblin1Sound;
+    public AudioSource goblin2Sound;
+    public AudioSource goblin3Sound;
 
     [SerializeField]
     private D_IdleState idleStateData;
@@ -59,7 +62,19 @@ public class Goblin : Entity
         {
             walkSound.Play();
         }
-
+        if (!goblin1Sound.isPlaying && !goblin2Sound.isPlaying && !goblin3Sound.isPlaying)
+        switch (Random.Range(0, 1000))
+        {
+            case 69:
+                goblin1Sound.Play();
+                break;
+            case 70:
+                goblin2Sound.Play();
+                break;
+            case 71:
+                goblin3Sound.Play();
+                break;
+        }
         base.Update();
     }
     public override void OnDrawGizmos()
