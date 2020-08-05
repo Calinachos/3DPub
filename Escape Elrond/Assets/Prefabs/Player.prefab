@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 1504272382403382905}
   - component: {fileID: 1504272382403382904}
   - component: {fileID: 1504272382403382907}
+  - component: {fileID: 2774229651216251215}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -333,6 +334,26 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2774229651216251215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504272382403382909}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8b48a1929bd42fc8a74e9281c1f25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CamTransform: {fileID: 0}
+  CameraSpeedMultiplier: 1
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  Size: 1
+  HorizontalSpeed: 0.2
+  VerticalSpeed: 0
+  Density: 2
+  Shader: {fileID: 0}
 --- !u!1 &1504272382417823296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,6 +1102,7 @@ GameObject:
   - component: {fileID: 1504272384249739059}
   - component: {fileID: 1504272382577359043}
   - component: {fileID: 1504272382577359042}
+  - component: {fileID: 925876077563295556}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -1334,6 +1356,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab059bc79158e4d4d985a313b845641f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &925876077563295556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504272382577359044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d6e19384f8f3342ab45fa375cbbf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1504272382403383174}
+  timer: 5
 --- !u!1 &1504272382585388180
 GameObject:
   m_ObjectHideFlags: 0
@@ -4761,7 +4797,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1504272383770946868}
   toggleTransition: 1
   graphic: {fileID: 1504272383183100552}
@@ -6274,7 +6310,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1504272382308921613}
   toggleTransition: 1
   graphic: {fileID: 1504272383904238564}
@@ -7106,7 +7142,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1504272384048131757}
   toggleTransition: 1
   graphic: {fileID: 1504272383069224922}
