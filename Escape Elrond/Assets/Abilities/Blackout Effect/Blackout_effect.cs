@@ -20,7 +20,6 @@ public class Blackout_effect : MonoBehaviour
         GameObject abilities = tier1.transform.GetChild(0).gameObject;
         GameObject step = abilities.transform.GetChild(0).gameObject;
         blackout = step.GetComponent<Skills>();
-        Debug.Log(blackout);
     }
     void Update()
     {

@@ -48,6 +48,7 @@ public class CharacterController2D : MonoBehaviour
         GameObject abilities = tier2.transform.GetChild(0).gameObject;
         GameObject step = abilities.transform.GetChild(1).gameObject;
         shadowStep = step.GetComponent<Skills>();
+        Debug.Log(shadowStep);
     }
     private void Awake()
 	{
@@ -128,7 +129,7 @@ public class CharacterController2D : MonoBehaviour
 			Flip();
 		}
     	// If the player should jump...
-		if (m_Grounded && jump && !shadowStep.unlocked)
+		if (m_Grounded && jump && !shadowStep.skillAvailable)
 		{
             // Add a vertical force to the player.
             jumpSound.Play();
@@ -137,7 +138,7 @@ public class CharacterController2D : MonoBehaviour
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 
-        if (shadowStep.unlocked)
+        if (shadowStep.skillAvailable)
         {
             if (m_Grounded)
             {

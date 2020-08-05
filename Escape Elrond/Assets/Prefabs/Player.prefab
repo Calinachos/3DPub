@@ -231,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504272382403382909}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5458746, y: 0.9900383, z: -10}
+  m_LocalPosition: {x: 1.6134514, y: 9.839212, z: -10}
   m_LocalScale: {x: 0.35714284, y: 0.35714284, z: 1}
   m_Children: []
   m_Father: {fileID: 1504272384249739066}
@@ -341,14 +341,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504272382403382909}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a8b48a1929bd42fc8a74e9281c1f25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CamTransform: {fileID: 1504272382403382906}
   CameraSpeedMultiplier: 1
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  Color: {r: 0, g: 0, b: 0, a: 1}
   Size: 1
   HorizontalSpeed: 0.2
   VerticalSpeed: 0
