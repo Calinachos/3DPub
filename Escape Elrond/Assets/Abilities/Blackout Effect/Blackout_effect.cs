@@ -25,7 +25,7 @@ public class Blackout_effect : MonoBehaviour
     {
         if (Input.GetKeyDown("1"))
         {
-            if (!enabled && blackout.unlocked)
+            if (!enabled && blackout.skillAvailable)
             {
                 blackoutSound.Play();
                 blackoutSet();
