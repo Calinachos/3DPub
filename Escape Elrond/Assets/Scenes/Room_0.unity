@@ -9388,6 +9388,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4510441229008529109, guid: 21b8206a0b3b6424c83a05de3ade7df6,
+        type: 3}
+      propertyPath: unlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510441229008529109, guid: 21b8206a0b3b6424c83a05de3ade7df6,
+        type: 3}
+      propertyPath: skillAvailable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510441229696011101, guid: 21b8206a0b3b6424c83a05de3ade7df6,
+        type: 3}
+      propertyPath: unlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510441229768449026, guid: 21b8206a0b3b6424c83a05de3ade7df6,
+        type: 3}
+      propertyPath: unlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510441230404600079, guid: 21b8206a0b3b6424c83a05de3ade7df6,
+        type: 3}
+      propertyPath: unlocked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4510441230921177475, guid: 21b8206a0b3b6424c83a05de3ade7df6,
         type: 3}
       propertyPath: m_LocalPosition.x

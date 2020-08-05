@@ -71,6 +71,10 @@ public class PlayerStats : MonoBehaviour
         {
             life = life - 500;
         }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            experience += 100;
+        }
         if (Input.GetKeyDown(KeyCode.N))
         {
             if (treeIsUp == false)
@@ -120,6 +124,5 @@ public class PlayerStats : MonoBehaviour
     {
         tree = GameObject.Find("Skill_Tree_Canvas(Clone)").transform.GetChild(0).gameObject;
         st = tree.GetComponent<SkillTree>();
-        Debug.Log("hello");
     }
 }

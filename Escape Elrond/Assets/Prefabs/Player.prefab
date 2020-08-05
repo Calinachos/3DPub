@@ -8103,7 +8103,7 @@ GameObject:
   - component: {fileID: 8272132829929644543}
   - component: {fileID: 4713199161309757837}
   m_Layer: 10
-  m_Name: ShadowStep
+  m_Name: ShadowStep Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

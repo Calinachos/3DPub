@@ -55,7 +55,7 @@ public class Goblin : Entity
 
     public override void Update()
     {
-        if (base.rb.velocity.magnitude < 0.5)
+        if (base.rb.velocity.magnitude < 0.5 && !isDead)
         {
             walkSound.Play();
         }
@@ -87,6 +87,7 @@ public class Goblin : Entity
                     break;
             }
             stateMachine.ChangeState(deadState);
+            walkSound.Stop();
         }
         else if (isStunned && stateMachine.currentState != stunState)
         {

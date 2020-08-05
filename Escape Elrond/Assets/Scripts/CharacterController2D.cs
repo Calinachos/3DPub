@@ -24,6 +24,7 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
+    private Skills shadowStep;
 
 	[Header("Events")]
 	[Space]
@@ -38,6 +39,17 @@ public class CharacterController2D : MonoBehaviour
     public bool doubleJumpEnabled = true;   // variable for double jump, when you unlock this skill this variable is true
     private bool canDoubleJump = true;   // if he can double jump
 
+    void Start()
+    {
+        GameObject tree = GameObject.Find("Skill_Tree_Canvas(Clone)").transform.GetChild(0).gameObject;
+        GameObject background = tree.transform.GetChild(0).gameObject;
+        GameObject content = background.transform.GetChild(1).gameObject;
+        GameObject tier2 = content.transform.GetChild(1).gameObject;
+        GameObject abilities = tier2.transform.GetChild(0).gameObject;
+        GameObject step = abilities.transform.GetChild(1).gameObject;
+        shadowStep = step.GetComponent<Skills>();
+        Debug.Log(shadowStep);
+    }
     private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -117,7 +129,7 @@ public class CharacterController2D : MonoBehaviour
 			Flip();
 		}
     	// If the player should jump...
-		if (m_Grounded && jump && !doubleJumpEnabled)
+		if (m_Grounded && jump && !shadowStep.unlocked)
 		{
             // Add a vertical force to the player.
             jumpSound.Play();
@@ -126,7 +138,7 @@ public class CharacterController2D : MonoBehaviour
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 
-        if (doubleJumpEnabled)
+        if (shadowStep.unlocked)
         {
             if (m_Grounded)
             {
