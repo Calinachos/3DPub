@@ -9,6 +9,7 @@ public class SetPlayerStats : MonoBehaviour
     {
         // Find Object with saved data
         GameObject sceneManager = GameObject.Find("SceneManagerDontDestroy(Clone)");
+        GameObject skillTree = GameObject.Find("SkillTree");
         var saveInfo = sceneManager.GetComponent<SaveInfoForNextLevel>();
         if (saveInfo.playerHealth != -1)
         {
@@ -21,7 +22,7 @@ public class SetPlayerStats : MonoBehaviour
             playerStats.level = saveInfo.playerLevel;
             playerStats.coins = saveInfo.playerCoins;
             playerStats.maxHealth = saveInfo.playerMaxHealth;
-
+          
             // ***Change UI max health (maybe add current health too) -> if needed later
 
             //if (GetComponentInChildren<HealthBar>() != null)

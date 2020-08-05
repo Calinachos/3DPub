@@ -10,7 +10,7 @@ public class SkillTree : MonoBehaviour
     public int points;
 
     [SerializeField]
-    private Skills[] skills;
+    public Skills[] skills;
 
     [SerializeField]
     private Skills[] unclockedDefault;

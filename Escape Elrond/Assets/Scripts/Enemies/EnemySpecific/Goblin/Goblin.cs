@@ -15,6 +15,7 @@ public class Goblin : Entity
     public AudioSource coins1;
     public AudioSource coins2;
     public AudioSource coins3;
+    public AudioSource walkSound;
 
     [SerializeField]
     private D_IdleState idleStateData;
@@ -52,6 +53,15 @@ public class Goblin : Entity
         stateMachine.Initialize(moveState);
     }
 
+    public override void Update()
+    {
+        if (base.rb.velocity.magnitude < 0.5)
+        {
+            walkSound.Play();
+        }
+
+        base.Update();
+    }
     public override void OnDrawGizmos()
     {
         base.OnDrawGizmos();

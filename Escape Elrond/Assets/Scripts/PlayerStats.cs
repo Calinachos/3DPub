@@ -120,5 +120,6 @@ public class PlayerStats : MonoBehaviour
     {
         tree = GameObject.Find("Skill_Tree_Canvas(Clone)").transform.GetChild(0).gameObject;
         st = tree.GetComponent<SkillTree>();
+        Debug.Log("hello");
     }
 }
