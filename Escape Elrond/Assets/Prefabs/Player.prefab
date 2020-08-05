@@ -346,14 +346,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8b48a1929bd42fc8a74e9281c1f25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CamTransform: {fileID: 0}
+  CamTransform: {fileID: 1504272382403382906}
   CameraSpeedMultiplier: 1
   Color: {r: 1, g: 1, b: 1, a: 1}
   Size: 1
   HorizontalSpeed: 0.2
   VerticalSpeed: 0
-  Density: 2
-  Shader: {fileID: 0}
+  Density: 0
+  Shader: {fileID: 4800000, guid: 8616dcd1c493e4f5c82258f262d88257, type: 3}
 --- !u!1 &1504272382417823296
 GameObject:
   m_ObjectHideFlags: 0
