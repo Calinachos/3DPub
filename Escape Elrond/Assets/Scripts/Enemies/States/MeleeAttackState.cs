@@ -59,15 +59,20 @@ public class MeleeAttackState : AttackState
             if (collider.gameObject.tag == "Player" && collider.gameObject.GetComponent<PlayerStats>().defense < (int)stateData.attackDamage)
             {
                 collider.gameObject.GetComponent<PlayerStats>().life += collider.gameObject.GetComponent<PlayerStats>().defense - (int)stateData.attackDamage;
+
+                /*
+                if (collider.gameObject.tag == "Player")
+                {
+                    collider.gameObject.GetComponent<PlayerStats>().life -= (int)stateData.attackDamage;
+                }
+                */
+
             }
 
-            /*
-            if (collider.gameObject.tag == "Player")
+            if (collider.gameObject.tag == "DarkSide")
             {
-                collider.gameObject.GetComponent<PlayerStats>().life -= (int)stateData.attackDamage;
+                collider.gameObject.GetComponent<CloneStats>().TakeDamage(10);
             }
-            */
-
         }
 
 
