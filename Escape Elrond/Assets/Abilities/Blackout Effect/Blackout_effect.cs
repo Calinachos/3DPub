@@ -16,6 +16,7 @@ using UnityEngine;
     private float lightness = 0f;
     private Skills blackout;
     public AudioSource blackoutSound;
+    public PlayerMovement playerMovement;
 
     private void Start()
     {
@@ -30,7 +31,7 @@ using UnityEngine;
 
     void Update()
     {
-        if (blackout.skillAvailable)
+        if (blackout.skillAvailable && !playerMovement.cloned)
         {
             if (effectEnabled == 0)
             {
@@ -69,7 +70,6 @@ using UnityEngine;
                 }
                 else
                 {
-                    Debug.Log("hello");
                     Entity[] enemies = GameObject.FindObjectsOfType<Entity>();
                     foreach (Entity e in enemies)
                     {

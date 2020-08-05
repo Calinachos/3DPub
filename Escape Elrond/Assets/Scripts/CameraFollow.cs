@@ -5,17 +5,32 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     private Transform playerTransform;
+    public GameObject playerCamera;
+    public GameObject cloneCamera;
+    public GameObject playerClone;
 
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerCamera.SetActive(true);
+        cloneCamera.SetActive(false);
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 t = transform.position;
+        if(playerClone.activeSelf)
+        {
+            playerCamera.SetActive(false);
+            cloneCamera.SetActive(true);
+        }
+        else
+        {
+            playerCamera.SetActive(true);
+            cloneCamera.SetActive(false);
+        }
+        /*Vector3 t = transform.position;
 
         // Case 1
         if (playerTransform.position.x <= 1.55f && playerTransform.position.x >= -1.4f)
@@ -43,7 +58,7 @@ public class CameraFollow : MonoBehaviour
             t.y = playerTransform.position.y;
         }
 
-        transform.position = t;
+        transform.position = t;*/
 
     }
 

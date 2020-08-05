@@ -25,6 +25,7 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
     private Skills shadowStep;
+    public bool clone = false;
 
 	[Header("Events")]
 	[Space]
@@ -48,7 +49,6 @@ public class CharacterController2D : MonoBehaviour
         GameObject abilities = tier2.transform.GetChild(0).gameObject;
         GameObject step = abilities.transform.GetChild(1).gameObject;
         shadowStep = step.GetComponent<Skills>();
-        Debug.Log(shadowStep);
     }
     private void Awake()
 	{
@@ -151,7 +151,7 @@ public class CharacterController2D : MonoBehaviour
                 m_Grounded = false;
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             }
-            else if (canDoubleJump && jump)
+            else if (canDoubleJump && jump && !clone)
             {    //second jump
                 shadowStepSound.Play();
                 animator.SetBool("isGrounded", false);
