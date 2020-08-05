@@ -63,17 +63,19 @@ public class Goblin : Entity
             walkSound.Play();
         }
         if (!goblin1Sound.isPlaying && !goblin2Sound.isPlaying && !goblin3Sound.isPlaying)
-        switch (Random.Range(0, 1000))
         {
-            case 69:
-                goblin1Sound.Play();
-                break;
-            case 70:
-                goblin2Sound.Play();
-                break;
-            case 71:
-                goblin3Sound.Play();
-                break;
+            switch (Random.Range(0, 1000))
+            {
+                case 69:
+                    goblin1Sound.Play();
+                    break;
+                case 70:
+                    goblin2Sound.Play();
+                    break;
+                case 71:
+                    goblin3Sound.Play();
+                    break;
+            }
         }
         base.Update();
     }
