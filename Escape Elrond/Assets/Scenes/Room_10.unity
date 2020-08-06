@@ -15994,12 +15994,12 @@ PrefabInstance:
     - target: {fileID: 8391797684040000574, guid: 93f51f1bca56eef4e99d93534044fde3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7839382
+      value: 1.7846516
       objectReference: {fileID: 0}
     - target: {fileID: 8391797684040000574, guid: 93f51f1bca56eef4e99d93534044fde3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9636509
+      value: 0.96365106
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93f51f1bca56eef4e99d93534044fde3, type: 3}
@@ -32141,6 +32141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924381337}
   - component: {fileID: 1924381336}
+  - component: {fileID: 1924381338}
   m_Layer: 0
   m_Name: SceneMaster
   m_TagString: Untagged
@@ -32178,6 +32179,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1924381338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924381335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd9770c209ca4e4cbe65ef926d58489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1926024687
 GameObject:
   m_ObjectHideFlags: 0

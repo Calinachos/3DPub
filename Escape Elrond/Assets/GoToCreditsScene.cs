@@ -8,7 +8,6 @@ public class GoToCreditsScene : MonoBehaviour
     public int nextLevel = 13;
     private GameObject toolTip = null;
     public AudioSource victoryMusic;
-    public AudioSource backgroundMusic;
     public bool victory = false;
 
     void Awake()
@@ -56,7 +55,8 @@ public class GoToCreditsScene : MonoBehaviour
     {
         if (isTouched && Input.GetKey(KeyCode.E))
         {
-            backgroundMusic.Stop();
+            GameObject tree = GameObject.Find("Skill_Tree_Canvas(Clone)");
+            tree.GetComponent<AudioSource>().Stop();
             victoryMusic.Play();
             victory = true;
         }

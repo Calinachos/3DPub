@@ -1102,6 +1102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443885752}
   - component: {fileID: 443885753}
+  - component: {fileID: 443885754}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1182,6 +1183,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &443885754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443885751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68f20e1992aeff4080e5285ce5a29ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 443885753}
 --- !u!1 &490985440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,6 +2354,7 @@ GameObject:
   - component: {fileID: 794882987}
   - component: {fileID: 794882986}
   - component: {fileID: 794882990}
+  - component: {fileID: 794882991}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2525,6 +2540,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &794882991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794882985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd9770c209ca4e4cbe65ef926d58489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &806394163
 GameObject:
   m_ObjectHideFlags: 0
