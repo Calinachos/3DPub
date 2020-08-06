@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerStats : MonoBehaviour
     public bool treeIsUp;
     [SerializeField] private AudioSource gameOverSound;
     [SerializeField] private AudioSource takeDamageSound;
+    public Image skillPointsNotUsed;
 
     public int attack = 10;
     public int defense = 0;
@@ -110,7 +112,13 @@ public class PlayerStats : MonoBehaviour
                 treeIsUp = false;
             }
         }
-            //Debug.Log("Current Hp : " + life + " MaxHp: " + maxHealth + " Experience: " + experience);
+        if (st.points > 0)
+        {
+            skillPointsNotUsed.enabled = true;
+        } else
+        {
+            skillPointsNotUsed.enabled = false;
+        }
             // level up 100xp -> 2, 200xp -> 3, 300xp -> 4 and so on
 
     }
