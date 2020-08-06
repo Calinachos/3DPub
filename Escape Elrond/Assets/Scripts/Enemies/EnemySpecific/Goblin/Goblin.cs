@@ -58,13 +58,21 @@ public class Goblin : Entity
 
     public override void Update()
     {
-        if (base.rb.velocity.magnitude < 0.5 && !isDead)
+        if (!walkSound.isPlaying && base.rb.velocity.magnitude > 2 && !isDead)
         {
             walkSound.Play();
         }
-        if (!goblin1Sound.isPlaying && !goblin2Sound.isPlaying && !goblin3Sound.isPlaying)
+        if (walkSound.isPlaying && base.rb.velocity.magnitude < 2)
         {
-            switch (Random.Range(0, 1000))
+            walkSound.Stop();
+        }
+        if (isDead)
+        {
+            walkSound.Stop();
+        }
+        if (!isDead && !goblin1Sound.isPlaying && !goblin2Sound.isPlaying && !goblin3Sound.isPlaying)
+        {
+            switch (Random.Range(0, 10000))
             {
                 case 69:
                     goblin1Sound.Play();

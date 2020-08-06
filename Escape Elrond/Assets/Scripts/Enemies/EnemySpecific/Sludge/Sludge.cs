@@ -12,6 +12,10 @@ public class Sludge : Entity
     public Sludge_MeleeAttackState meleeAttackState { get; private set; }
     public Sludge_StunState stunState { get; private set; }
     public Sludge_DeadState deadState { get; private set; }
+    public AudioSource coins1;
+    public AudioSource coins2;
+    public AudioSource coins3;
+    public AudioSource walkSound;
 
     [SerializeField]
     private D_IdleState idleStateData;
@@ -49,6 +53,19 @@ public class Sludge : Entity
         stateMachine.Initialize(moveState);
     }
 
+    public override void Update()
+    {
+        if (!walkSound.isPlaying && base.rb.velocity.magnitude > 2 && !isDead)
+        {
+            walkSound.Play();
+        } 
+	if (walkSound.isPlaying && base.rb.velocity.magnitude < 2)
+        {
+            walkSound.Stop();
+        }
+        base.Update();
+    }
+
     public override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
@@ -62,6 +79,18 @@ public class Sludge : Entity
 
         if (isDead)
         {
+            switch (Random.Range(0, 3))
+            {
+                case 0:
+                    coins1.Play();
+                    break;
+                case 1:
+                    coins2.Play();
+                    break;
+                case 2:
+                    coins3.Play();
+                    break;
+            }
             stateMachine.ChangeState(deadState);
         }
         else if (isStunned && stateMachine.currentState != stunState)

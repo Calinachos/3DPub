@@ -12,6 +12,9 @@ public class Skeleton : Entity
     public Skeleton_MeleeAttackState meleeAttackState { get; private set; }
     public Skeleton_StunState stunState { get; private set; }
     public Skeleton_DeadState deadState { get; private set; }
+    public AudioSource coins1;
+    public AudioSource coins2;
+    public AudioSource coins3;
 
     [SerializeField]
     private D_IdleState idleStateData;
@@ -62,6 +65,18 @@ public class Skeleton : Entity
 
         if (isDead)
         {
+            switch (Random.Range(0, 3))
+            {
+                case 0:
+                    coins1.Play();
+                    break;
+                case 1:
+                    coins2.Play();
+                    break;
+                case 2:
+                    coins3.Play();
+                    break;
+            }
             stateMachine.ChangeState(deadState);
         }
         else if (isStunned && stateMachine.currentState != stunState)
