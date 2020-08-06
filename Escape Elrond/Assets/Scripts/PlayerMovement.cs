@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
         GameObject abilities = tier2.transform.GetChild(0).gameObject;
         GameObject step = abilities.transform.GetChild(0).gameObject;
         darkSide = step.GetComponent<Skills>();
-        Debug.Log(darkSide);
         if (playerClone != null)
         {
             playerClone.SetActive(false);
@@ -60,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             if (collider.gameObject.tag == "Enemy")
             {
                 AttackDetails ad;
-                ad.damageAmount = 10;
+                ad.damageAmount = ps.attack;
                 ad.position = (Vector2)collider.gameObject.transform.position;
                 ad.stunDamageAmount = 5;
                 if (!collider.gameObject.transform.parent.GetComponent<Entity>().isDead)
@@ -95,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (ps.treeIsUp == false)
                 {
-                    if (Input.GetButtonDown("Attack1"))
+                    if (Input.GetButtonDown("Attack1") && !attack)
                     {
                         animator.SetTrigger("Attack1");
                         Attack();

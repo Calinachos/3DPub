@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newDeadStateData", menuName = "Data/State Data/Dead State")]
 public class D_DeadState : ScriptableObject
 {
-
+    public int coinsDropped = 5;
+    public int xpDropped = 50;
 }

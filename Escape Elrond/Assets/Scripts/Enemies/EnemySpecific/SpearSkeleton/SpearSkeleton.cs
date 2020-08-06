@@ -15,6 +15,7 @@ public class SpearSkeleton : Entity
     public AudioSource coins1;
     public AudioSource coins2;
     public AudioSource coins3;
+    public AudioSource walkSound;
 
     [SerializeField]
     private D_IdleState idleStateData;
@@ -50,6 +51,23 @@ public class SpearSkeleton : Entity
         deadState = new SpearSkeleton_DeadState(this, stateMachine, "dead", deadStateData, this);
 
         stateMachine.Initialize(moveState);
+    }
+
+    public override void Update()
+    {
+        if (!walkSound.isPlaying && base.rb.velocity.magnitude > 1 && !isDead)
+        {
+            walkSound.Play();
+        }
+        if (walkSound.isPlaying && base.rb.velocity.magnitude < 1)
+        {
+            walkSound.Stop();
+        }
+        if (isDead)
+        {
+            walkSound.Stop();
+        }
+        base.Update();
     }
 
     public override void OnDrawGizmos()

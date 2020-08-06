@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Skills : MonoBehaviour
+public class Skills : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     // Start is called before the first frame update
     private Image sprite;
@@ -23,6 +24,8 @@ public class Skills : MonoBehaviour
     private Skills childSkill;
 
     public bool skillAvailable = false;
+    [SerializeField]
+    private GameObject tooltip;
 
 
     private void Awake()
@@ -69,5 +72,25 @@ public class Skills : MonoBehaviour
         countText.color = Color.white;
 
         unlocked = true;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        ShowTooltip();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        HideTooltip();
+    }
+
+    public void ShowTooltip()
+    {
+        tooltip.SetActive(true);
+    }
+
+    public void HideTooltip()
+    {
+        tooltip.SetActive(false);
     }
 }

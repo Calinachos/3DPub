@@ -15,6 +15,7 @@ public class FlyingEye : Entity
     public AudioSource coins1;
     public AudioSource coins2;
     public AudioSource coins3;
+    public AudioSource FlySound;
 
     [SerializeField]
     private D_IdleState idleStateData;
@@ -52,6 +53,18 @@ public class FlyingEye : Entity
         stateMachine.Initialize(moveState);
     }
 
+    public override void Update()
+    {
+        base.Update();
+        if (!FlySound.isPlaying && !isDead)
+        {
+            FlySound.Play();
+        }
+        if (isDead)
+        {
+            FlySound.Stop();
+        }
+    }
     public override void OnDrawGizmos()
     {
         base.OnDrawGizmos();

@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a789629289cb844c8c50d2a9a6ad5e2, type: 3}
   m_Name: ArmoredSkeleton_DeadData
   m_EditorClassIdentifier: 
+  coinsDropped: 40
+  xpDropped: 200

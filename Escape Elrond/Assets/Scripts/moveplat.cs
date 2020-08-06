@@ -9,13 +9,19 @@ public class moveplat : MonoBehaviour
 {
     
     public float speed = 1;
-    public float timeLeft = 12;
+    public float duration = 12;
+    private float timeLeft;
+
+    void Start()
+    {
+        timeLeft = duration;
+    }
 
     void Update()
     {
 
 
-        if (timeLeft > -12)
+        if (timeLeft > -duration)
         {
             timeLeft -= Time.deltaTime;
             if (timeLeft > 0)
@@ -25,7 +31,7 @@ public class moveplat : MonoBehaviour
                 transform.Translate(Vector2.up * speed * Time.deltaTime);
 
         }
-        else timeLeft = 12;
+        else timeLeft = duration;
 
         
        

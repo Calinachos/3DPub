@@ -20,8 +20,9 @@ public class DeadState : State
     {
         GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
         PlayerStats playerStat = player.GetComponent <PlayerStats> ();
-        playerStat.experience += 50;
-        playerStat.coins += 5;
+        playerStat.experience += stateData.xpDropped;
+        int coinsDropped = Random.Range(stateData.coinsDropped / 2, stateData.coinsDropped + 1);
+        playerStat.coins += coinsDropped;
         base.Enter();
 
         entity.anim.SetTrigger("dead");

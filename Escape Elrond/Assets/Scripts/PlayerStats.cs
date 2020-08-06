@@ -20,7 +20,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private AudioSource gameOverSound;
     [SerializeField] private AudioSource takeDamageSound;
 
-    int attack = 20;
+    public int attack = 10;
     public int defense = 0;
     private bool gameOver = false;
     private int formerLife = 0;
@@ -39,6 +39,19 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (experience / level >= 100)
+        {
+            experience = experience - 100 * level;
+            level++;
+            st.points++;
+            st.UpdateTalentPointText();
+            attack = attack + 2;
+            maxHealth = maxHealth + 20;
+            life = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetHealth(maxHealth);
+        }
+   
         playerCoins.SetCoin(coins);
         healthBar.SetHealth(life);
         progressBar.CurrentValue = experience;
@@ -73,7 +86,7 @@ public class PlayerStats : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
-            experience += 100;
+            experience += 1000;
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
@@ -99,18 +112,6 @@ public class PlayerStats : MonoBehaviour
         }
             //Debug.Log("Current Hp : " + life + " MaxHp: " + maxHealth + " Experience: " + experience);
             // level up 100xp -> 2, 200xp -> 3, 300xp -> 4 and so on
-        if (experience / level >= 100)
-        {
-            experience = experience - 100 * level;
-            level++;
-            st.points++;
-            st.UpdateTalentPointText();
-            attack = attack + 2;
-            maxHealth = maxHealth + 20;
-            life = maxHealth;
-            healthBar.SetMaxHealth(maxHealth);
-            healthBar.SetHealth(maxHealth);
-        }
 
     }
 

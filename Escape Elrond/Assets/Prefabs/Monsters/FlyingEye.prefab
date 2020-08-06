@@ -42,10 +42,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 351b01d09207b404e8fc1ad827f627ec, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -563,6 +563,7 @@ MonoBehaviour:
   coins1: {fileID: 5854502714200076930}
   coins2: {fileID: 2095259007956629451}
   coins3: {fileID: 2637946582586440029}
+  FlySound: {fileID: 6324764669658011117}
   idleStateData: {fileID: 11400000, guid: 2080efab37dff9c4bb665d9ca3e9d533, type: 2}
   moveStateData: {fileID: 11400000, guid: 178d0f16ae922834893671675af54d44, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: cd9dacfbb538cd3458ea0dbdbd3dafc2,
