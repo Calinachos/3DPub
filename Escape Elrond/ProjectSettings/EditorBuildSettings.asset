@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final_Room.unity
     guid: 7deaa44dacf13ad4aa1f2ff573ca0dde
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: bd36b26b9a75860458977ebbf8e17052
   m_configObjects: {}
