@@ -84,17 +84,27 @@ PrefabInstance:
     - target: {fileID: 2751338333825230818, guid: 46d3101cebb6e5f4b9454cbaa71717a5,
         type: 3}
       propertyPath: startLine
-      value: 20
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2751338333825230818, guid: 46d3101cebb6e5f4b9454cbaa71717a5,
         type: 3}
       propertyPath: endLine
-      value: 23
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2751338333825230822, guid: 46d3101cebb6e5f4b9454cbaa71717a5,
         type: 3}
       propertyPath: m_Name
       value: NPC_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490329157667710864, guid: 46d3101cebb6e5f4b9454cbaa71717a5,
+        type: 3}
+      propertyPath: currentLine
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490329157667710864, guid: 46d3101cebb6e5f4b9454cbaa71717a5,
+        type: 3}
+      propertyPath: finalLine
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5863524877941852144, guid: 46d3101cebb6e5f4b9454cbaa71717a5, type: 3}

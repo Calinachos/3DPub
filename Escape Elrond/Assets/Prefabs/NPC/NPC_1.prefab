@@ -100,12 +100,12 @@ PrefabInstance:
     - target: {fileID: 866398639622690474, guid: 2955125182c66d14da6d3b2506f9b86e,
         type: 3}
       propertyPath: startLine
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 866398639622690474, guid: 2955125182c66d14da6d3b2506f9b86e,
         type: 3}
       propertyPath: endLine
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 866398639622690475, guid: 2955125182c66d14da6d3b2506f9b86e,
         type: 3}
@@ -121,6 +121,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPC_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609895195543738072, guid: 2955125182c66d14da6d3b2506f9b86e,
+        type: 3}
+      propertyPath: currentLine
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609895195543738072, guid: 2955125182c66d14da6d3b2506f9b86e,
+        type: 3}
+      propertyPath: finalLine
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2955125182c66d14da6d3b2506f9b86e, type: 3}

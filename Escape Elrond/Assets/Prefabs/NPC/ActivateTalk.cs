@@ -64,6 +64,7 @@ public class ActivateTalk : MonoBehaviour
         if(other.name == "Player")
         {
             waitForButton = false;
+            theTextBox.DisableTextBox();
         }
     }
     

@@ -39,12 +39,12 @@ PrefabInstance:
     - target: {fileID: 1786027690075264497, guid: d5cfc166f4e02ca439bd54f3888f709c,
         type: 3}
       propertyPath: startLine
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1786027690075264497, guid: d5cfc166f4e02ca439bd54f3888f709c,
         type: 3}
       propertyPath: endLine
-      value: 19
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1786027690075264498, guid: d5cfc166f4e02ca439bd54f3888f709c,
         type: 3}
@@ -107,6 +107,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1786027690075264499, guid: d5cfc166f4e02ca439bd54f3888f709c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786027690075264499, guid: d5cfc166f4e02ca439bd54f3888f709c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1786027690075264501, guid: d5cfc166f4e02ca439bd54f3888f709c,
         type: 3}
       propertyPath: m_Name
@@ -117,6 +127,16 @@ PrefabInstance:
       propertyPath: textFile
       value: 
       objectReference: {fileID: 4900000, guid: 0da5cfe4d3444b84d8f27a0073585a72, type: 3}
+    - target: {fileID: 6419168465053750659, guid: d5cfc166f4e02ca439bd54f3888f709c,
+        type: 3}
+      propertyPath: currentLine
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419168465053750659, guid: d5cfc166f4e02ca439bd54f3888f709c,
+        type: 3}
+      propertyPath: finalLine
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5929380093494213124, guid: d5cfc166f4e02ca439bd54f3888f709c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5cfc166f4e02ca439bd54f3888f709c, type: 3}

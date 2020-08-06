@@ -25,7 +25,7 @@ public class DeadState : State
         playerStat.coins += coinsDropped;
         base.Enter();
 
-        entity.anim.SetTrigger("dead");
+        //entity.anim.SetTrigger("dead");
         //entity.gameObject.SetActive(false);
         entity.aliveGO.GetComponent<BoxCollider2D>().enabled = false;
         entity.rb.gravityScale = 1;

@@ -37,7 +37,7 @@ public class TextBoxManager : MonoBehaviour
     {
         if(!isActive)
             return;
-        
+
         theText.text = textLines[currentLine];
 
         if(Input.GetKeyDown(KeyCode.E))
@@ -52,13 +52,11 @@ public class TextBoxManager : MonoBehaviour
     {
         textBox.SetActive(true);
         isActive = true;
-        //player.canMove = false;
     }
     public void DisableTextBox()
     {
         textBox.SetActive(false);
         isActive = false;
-        //player.canMove = true;
     }
     public void ReloadScript(TextAsset theText)
     {
