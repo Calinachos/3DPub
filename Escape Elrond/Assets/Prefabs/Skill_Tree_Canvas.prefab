@@ -3733,8 +3733,7 @@ MonoBehaviour:
   m_Text: 'DuskShield
 
 
-    The player creates a shield that blocks the first 2 or
-    3 hits.'
+    The player creates a shield that blocks the first 2 hits.'
 --- !u!1 &8272880268647283931
 GameObject:
   m_ObjectHideFlags: 0

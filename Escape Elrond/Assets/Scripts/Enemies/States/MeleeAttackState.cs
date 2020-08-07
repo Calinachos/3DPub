@@ -58,8 +58,8 @@ public class MeleeAttackState : AttackState
 
             if (collider.gameObject.tag == "Player" && collider.gameObject.GetComponent<PlayerStats>().defense < (int)stateData.attackDamage)
             {
-                collider.gameObject.GetComponent<PlayerStats>().life += collider.gameObject.GetComponent<PlayerStats>().defense - (int)stateData.attackDamage;
-
+                //collider.gameObject.GetComponent<PlayerStats>().life += collider.gameObject.GetComponent<PlayerStats>().defense - (int)stateData.attackDamage;
+                collider.gameObject.GetComponent<PlayerStats>().TakeDamage((int)stateData.attackDamage - collider.gameObject.GetComponent<PlayerStats>().defense);
                 /*
                 if (collider.gameObject.tag == "Player")
                 {

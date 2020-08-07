@@ -21,14 +21,24 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private AudioSource gameOverSound;
     [SerializeField] private AudioSource takeDamageSound;
     public Image skillPointsNotUsed;
+    public Image duskShield1;
+    public Image duskShield2;
+    [SerializeField] private AudioSource duskShieldSound;
+    [SerializeField] private AudioSource duskShieldDestroyedSound;
 
     public int attack = 10;
     public int defense = 0;
     private bool gameOver = false;
-    private int formerLife = 0;
+    private float elapsedTimeDuskShield;
+    private float cooldownDuskShield;
+    private bool duskShieldActivated;
+    private Skills duskShield;
+
     // Start is called before the first frame update
     void Start()
     {
+        duskShieldActivated = false;
+        cooldownDuskShield = 20f;
         SetReferences();
         Time.timeScale = 1f;
         //st.points = 0;
@@ -59,14 +69,7 @@ public class PlayerStats : MonoBehaviour
         progressBar.CurrentValue = experience;
         progressBar.lvl = level;
         //experience = progressBar.CurrentValue();
-        if (formerLife != life)
-        {
-            if (formerLife > life)
-            {
-                takeDamageSound.Play();
-            }
-            formerLife = life;
-        }
+
         if (life <= 0)
         {
             if (!gameOver)
@@ -112,6 +115,35 @@ public class PlayerStats : MonoBehaviour
                 treeIsUp = false;
             }
         }
+        if (cooldownDuskShield < 20f)
+        {
+            cooldownDuskShield += Time.deltaTime;
+        }
+        if (duskShieldActivated)
+        {
+            elapsedTimeDuskShield += Time.deltaTime;
+            if (elapsedTimeDuskShield > 10f)
+            {
+                duskShieldActivated = false;
+                duskShield1.enabled = false;
+                duskShield2.enabled = false;
+                duskShieldDestroyedSound.Play();
+                cooldownDuskShield = 0f;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            if (!duskShieldActivated && cooldownDuskShield >= 20f && duskShield.skillAvailable)
+            {
+                duskShieldSound.Play();
+                elapsedTimeDuskShield = 0f;
+                duskShieldActivated = true;
+                duskShield1.enabled = true;
+                duskShield2.enabled = true;
+            }
+        }
+
         if (st.points > 0)
         {
             skillPointsNotUsed.enabled = true;
@@ -123,15 +155,40 @@ public class PlayerStats : MonoBehaviour
 
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        life -= damage;
-        healthBar.SetHealth(life);
+        if (duskShieldActivated)
+        {
+            if (duskShield2.enabled)
+            {
+                duskShield2.enabled = false;
+            }
+            else
+            {
+                duskShield1.enabled = false;
+                duskShieldActivated = false;
+                cooldownDuskShield = 0f;
+            }
+            duskShieldDestroyedSound.Play();
+        }
+        else
+        {
+            takeDamageSound.Play();
+            life -= damage;
+            healthBar.SetHealth(life);
+        }
     }
 
     void SetReferences()
     {
         tree = GameObject.Find("Skill_Tree_Canvas(Clone)").transform.GetChild(0).gameObject;
         st = tree.GetComponent<SkillTree>();
+        GameObject stree = GameObject.Find("Skill_Tree_Canvas(Clone)").transform.GetChild(0).gameObject;
+        GameObject background = stree.transform.GetChild(0).gameObject;
+        GameObject content = background.transform.GetChild(1).gameObject;
+        GameObject tier2 = content.transform.GetChild(1).gameObject;
+        GameObject abilities = tier2.transform.GetChild(0).gameObject;
+        GameObject step = abilities.transform.GetChild(2).gameObject;
+        duskShield = step.GetComponent<Skills>();
     }
 }

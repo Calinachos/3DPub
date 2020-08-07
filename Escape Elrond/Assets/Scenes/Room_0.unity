@@ -20095,6 +20095,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &995017495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7513411998175220148, guid: 93f51f1bca56eef4e99d93534044fde3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504272382812177542}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &996830950
 GameObject:
   m_ObjectHideFlags: 0
@@ -24743,6 +24755,18 @@ Transform:
   m_Father: {fileID: 1412425774}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1270853729 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1689037355391957257, guid: 93f51f1bca56eef4e99d93534044fde3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504272382812177542}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1272653405
 GameObject:
   m_ObjectHideFlags: 0
@@ -42900,6 +42924,11 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 1565595599}
+    - target: {fileID: 1234142065965234712, guid: 93f51f1bca56eef4e99d93534044fde3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1239643764206957953, guid: 93f51f1bca56eef4e99d93534044fde3,
         type: 3}
       propertyPath: m_Volume
@@ -43025,6 +43054,16 @@ PrefabInstance:
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1504272384249739059, guid: 93f51f1bca56eef4e99d93534044fde3,
+        type: 3}
+      propertyPath: duskShield1
+      value: 
+      objectReference: {fileID: 1270853729}
+    - target: {fileID: 1504272384249739059, guid: 93f51f1bca56eef4e99d93534044fde3,
+        type: 3}
+      propertyPath: duskShield2
+      value: 
+      objectReference: {fileID: 995017495}
     - target: {fileID: 1504272384249739066, guid: 93f51f1bca56eef4e99d93534044fde3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43144,6 +43183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.9900383
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064137095817925215, guid: 93f51f1bca56eef4e99d93534044fde3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195748102509535696, guid: 93f51f1bca56eef4e99d93534044fde3,
         type: 3}
