@@ -85,14 +85,14 @@ public class PlayerStats : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        /*if (Input.GetKeyDown(KeyCode.P))
         {
             life = life - 500;
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
             experience += 1000;
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.N))
         {
             if (treeIsUp == false)
