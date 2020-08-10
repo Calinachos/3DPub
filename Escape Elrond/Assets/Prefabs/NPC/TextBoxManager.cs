@@ -38,6 +38,10 @@ public class TextBoxManager : MonoBehaviour
         if(!isActive)
             return;
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            DisableTextBox();
+        }
         theText.text = textLines[currentLine];
 
         if(Input.GetKeyDown(KeyCode.E))

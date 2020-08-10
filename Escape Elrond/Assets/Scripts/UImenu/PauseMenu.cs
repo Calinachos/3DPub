@@ -8,7 +8,6 @@ public class PauseMenu : MonoBehaviour
 
     public bool GameIsPaused = false;
     public static bool IsInOptions = false;
-
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
 
@@ -76,6 +75,15 @@ public class PauseMenu : MonoBehaviour
 
     public void PlayAgain()
     {
+        GameObject.Find("Skill_Tree_Canvas(Clone)").SetActive(false);
+        GameObject sceneManager = GameObject.Find("SceneManagerDontDestroy(Clone)");
+        var saveInfo = sceneManager.GetComponent<SaveInfoForNextLevel>();
+        saveInfo.playerHealth = 100;
+        saveInfo.playerExperience = 0;
+        saveInfo.playerLevel = 1;
+        saveInfo.playerCoins = 0;
+        saveInfo.playerMaxHealth = 100;
+        saveInfo.playerAttack = 10;
         Time.timeScale = 1f;
         SceneManager.LoadScene("Room_0");
         Time.timeScale = 1f;

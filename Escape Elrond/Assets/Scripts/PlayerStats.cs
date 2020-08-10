@@ -79,20 +79,24 @@ public class PlayerStats : MonoBehaviour
                 Time.timeScale = 0f;
                 deathMenu.SetActive(true);
                 //death screen
+                st.points = 0;
                 healthBar.SetA(false);
                 progressBar.SetA(false);
-                //playerCoins.SetA(false);
+                playerCoins.SetA(false);
+                skillPointsNotUsed.enabled = false;
+                duskShield1.enabled = false;
+                duskShield2.enabled = false;
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        /*if (Input.GetKeyDown(KeyCode.P))
         {
             life = life - 500;
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
             experience += 1000;
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.N))
         {
             if (treeIsUp == false)

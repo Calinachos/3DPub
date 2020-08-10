@@ -72,7 +72,7 @@ public class OnTriggerSetNextLevel : MonoBehaviour
             saveInfo.playerLevel = playerStats.level;
             saveInfo.playerCoins = playerStats.coins;
             saveInfo.playerMaxHealth = playerStats.maxHealth;
-
+            saveInfo.playerAttack = playerStats.attack;
             SceneManager.LoadScene(nextLevel);
         }
     }

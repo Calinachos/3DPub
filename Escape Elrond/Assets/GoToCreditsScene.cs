@@ -53,7 +53,7 @@ public class GoToCreditsScene : MonoBehaviour
 
     void Update()
     {
-        if (isTouched && Input.GetKey(KeyCode.E))
+        if (isTouched && Input.GetKey(KeyCode.E) && !victory)
         {
             GameObject tree = GameObject.Find("Skill_Tree_Canvas(Clone)");
             tree.GetComponent<AudioSource>().Stop();

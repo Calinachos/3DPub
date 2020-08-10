@@ -11,7 +11,8 @@ public class SaveInfoForNextLevel : MonoBehaviour
     public int playerLevel = -1;
     public int playerCoins = -1;
     public int playerMaxHealth = -1;
-
+    public int playerAttack = 10;
+    public bool gameOver = false;
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);

@@ -1362,6 +1362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab059bc79158e4d4d985a313b845641f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: 0
 --- !u!114 &925876077563295556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3566,6 +3567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameIsPaused: 0
+  setPlayerStats: {fileID: 1504272382577359042}
   pauseMenuUI: {fileID: 1504272384301657272}
   optionsMenuUI: {fileID: 1504272383410496812}
 --- !u!1 &1504272383410496812
@@ -5798,6 +5800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameIsPaused: 0
+  setPlayerStats: {fileID: 1504272382577359042}
   pauseMenuUI: {fileID: 1504272384301657272}
   optionsMenuUI: {fileID: 1504272383410496812}
 --- !u!114 &8339417504432339611
@@ -7415,6 +7418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameIsPaused: 0
+  setPlayerStats: {fileID: 0}
   pauseMenuUI: {fileID: 1504272384301657272}
   optionsMenuUI: {fileID: 1504272383410496812}
 --- !u!114 &5129427509650296328
